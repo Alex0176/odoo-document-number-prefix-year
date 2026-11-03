@@ -1,0 +1,202 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * document_number_prefix_year
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-03 11:44+0000\n"
+"PO-Revision-Date: 2026-11-03 11:44+0000\n"
+"Last-Translator: \n"
+"Language: de\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#. module: document_number_prefix_year
+msgid "A confirmed quotation receives a new number with the sales order prefix. The quotation number is kept on the order."
+msgstr "Ein bestätigtes Angebot erhält eine neue Nummer mit dem Auftragspräfix. Die Angebotsnummer bleibt am Auftrag gespeichert."
+
+#. module: document_number_prefix_year
+msgid "Companies"
+msgstr "Unternehmen"
+
+#. module: document_number_prefix_year
+msgid "Config Settings"
+msgstr "Konfigurationseinstellungen"
+
+#. module: document_number_prefix_year
+msgid "Counter"
+msgstr "Zähler"
+
+#. module: document_number_prefix_year
+msgid "Counter Digits"
+msgstr "Stellen des Zählers"
+
+#. module: document_number_prefix_year
+msgid "Credit Note Prefix"
+msgstr "Präfix Gutschrift"
+
+#. module: document_number_prefix_year
+msgid "Customer invoices and credit notes are numbered when they are posted."
+msgstr "Ausgangsrechnungen und Gutschriften erhalten ihre Nummer beim Buchen."
+
+#. module: document_number_prefix_year
+msgid "Delivery Order Prefix"
+msgstr "Präfix Lieferschein"
+
+#. module: document_number_prefix_year
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: document_number_prefix_year
+msgid "Document Numbering"
+msgstr "Belegnummern"
+
+#. module: document_number_prefix_year
+msgid "Format"
+msgstr "Format"
+
+#. module: document_number_prefix_year
+msgid "Four digits (2026)"
+msgstr "Vierstellig (2026)"
+
+#. module: document_number_prefix_year
+msgid "ID"
+msgstr "ID"
+
+#. module: document_number_prefix_year
+msgid "Invoice Prefix"
+msgstr "Präfix Rechnung"
+
+#. module: document_number_prefix_year
+msgid "Invoicing"
+msgstr "Rechnungsstellung"
+
+#. module: document_number_prefix_year
+msgid "Journal Entry"
+msgstr "Buchungssatz"
+
+#. module: document_number_prefix_year
+msgid "Leave a prefix empty to keep the standard Odoo numbering for that document type."
+msgstr "Ein leeres Präfix behält für diese Belegart die Standard-Nummerierung von Odoo bei."
+
+#. module: document_number_prefix_year
+#. odoo-python
+#: code:addons/document_number_prefix_year/models/numbering.py
+msgid "New"
+msgstr "Neu"
+
+#. module: document_number_prefix_year
+msgid "New Number on Confirmation"
+msgstr "Neue Nummer beim Bestätigen"
+
+#. module: document_number_prefix_year
+msgid "Number = prefix + year + counter, e.g. AN26000001. The counter restarts every year and always continues after the highest existing number of that year (also numbers imported from other systems)."
+msgstr "Nummer = Präfix + Jahr + Zähler, z. B. AN26000001. Der Zähler beginnt jedes Jahr neu und schließt immer an die höchste vorhandene Nummer dieses Jahres an (auch an aus anderen Systemen importierte Nummern)."
+
+#. module: document_number_prefix_year
+msgid "Number of the quotation this order was confirmed from."
+msgstr "Nummer des Angebots, aus dem dieser Auftrag bestätigt wurde."
+
+#. module: document_number_prefix_year
+#. odoo-python
+#: code:addons/document_number_prefix_year/models/res_company.py
+#, python-format
+msgid "Prefix “%(prefix)s” must not contain spaces or end with a digit."
+msgstr "Das Präfix „%(prefix)s“ darf keine Leerzeichen enthalten und nicht mit einer Ziffer enden."
+
+#. module: document_number_prefix_year
+msgid "Prefixes"
+msgstr "Präfixe"
+
+#. module: document_number_prefix_year
+msgid "Purchase"
+msgstr "Einkauf"
+
+#. module: document_number_prefix_year
+msgid "Purchase Order"
+msgstr "Bestellung"
+
+#. module: document_number_prefix_year
+msgid "Purchase Order Prefix"
+msgstr "Präfix Bestellung"
+
+#. module: document_number_prefix_year
+msgid "Quotation Number"
+msgstr "Angebotsnummer"
+
+#. module: document_number_prefix_year
+msgid "Quotation Prefix"
+msgstr "Präfix Angebot"
+
+#. module: document_number_prefix_year
+msgid "Receipt Prefix"
+msgstr "Präfix Wareneingang"
+
+#. module: document_number_prefix_year
+msgid "Sales"
+msgstr "Verkauf"
+
+#. module: document_number_prefix_year
+msgid "Sales Order"
+msgstr "Verkaufsauftrag"
+
+#. module: document_number_prefix_year
+msgid "Sales Order Prefix"
+msgstr "Präfix Auftrag"
+
+#. module: document_number_prefix_year
+#. odoo-python
+#: code:addons/document_number_prefix_year/models/res_company.py
+msgid "The counter must have between 1 and 12 digits."
+msgstr "Der Zähler muss zwischen 1 und 12 Stellen haben."
+
+#. module: document_number_prefix_year
+msgid "Transfer"
+msgstr "Transfer"
+
+#. module: document_number_prefix_year
+msgid "Two digits (26)"
+msgstr "Zweistellig (26)"
+
+#. module: document_number_prefix_year
+msgid "When a quotation is confirmed it gets a number with the sales order prefix; the quotation number is kept on the order."
+msgstr "Beim Bestätigen erhält ein Angebot eine Nummer mit dem Auftragspräfix; die Angebotsnummer bleibt am Auftrag gespeichert."
+
+#. module: document_number_prefix_year
+msgid "Year Format"
+msgstr "Jahresformat"
+
+#. module: document_number_prefix_year
+msgid "e.g. AN"
+msgstr "z. B. AN"
+
+#. module: document_number_prefix_year
+msgid "e.g. AU"
+msgstr "z. B. AU"
+
+#. module: document_number_prefix_year
+msgid "e.g. BE"
+msgstr "z. B. BE"
+
+#. module: document_number_prefix_year
+msgid "e.g. GU"
+msgstr "z. B. GU"
+
+#. module: document_number_prefix_year
+msgid "e.g. LI"
+msgstr "z. B. LI"
+
+#. module: document_number_prefix_year
+msgid "e.g. RE"
+msgstr "z. B. RE"
+
+#. module: document_number_prefix_year
+msgid "e.g. WE"
+msgstr "z. B. WE"
+

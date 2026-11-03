@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Biricon IT Services GmbH
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.document.number</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Document Numbering" string="Document Numbering" name="document_number_prefix_year"
+                     groups="base.group_system">
+                    <block title="Prefixes" name="document_number_prefixes">
+                        <setting string="Sales" company_dependent="1"
+                                 help="Leave a prefix empty to keep the standard Odoo numbering for that document type.">
+                            <div class="content-group mt16">
+                                <div class="row"><label for="document_number_quotation_prefix" class="col-6 o_light_label"/>
+                                    <field name="document_number_quotation_prefix" class="col-4" placeholder="e.g. AN"/></div>
+                                <div class="row"><label for="document_number_order_prefix" class="col-6 o_light_label"/>
+                                    <field name="document_number_order_prefix" class="col-4" placeholder="e.g. AU"/></div>
+                                <div class="row"><label for="document_number_delivery_prefix" class="col-6 o_light_label"/>
+                                    <field name="document_number_delivery_prefix" class="col-4" placeholder="e.g. LI"/></div>
+                            </div>
+                        </setting>
+                        <setting string="Invoicing" company_dependent="1"
+                                 help="Customer invoices and credit notes are numbered when they are posted.">
+                            <div class="content-group mt16">
+                                <div class="row"><label for="document_number_invoice_prefix" class="col-6 o_light_label"/>
+                                    <field name="document_number_invoice_prefix" class="col-4" placeholder="e.g. RE"/></div>
+                                <div class="row"><label for="document_number_refund_prefix" class="col-6 o_light_label"/>
+                                    <field name="document_number_refund_prefix" class="col-4" placeholder="e.g. GU"/></div>
+                            </div>
+                        </setting>
+                        <setting string="Purchase" company_dependent="1">
+                            <div class="content-group mt16">
+                                <div class="row"><label for="document_number_purchase_prefix" class="col-6 o_light_label"/>
+                                    <field name="document_number_purchase_prefix" class="col-4" placeholder="e.g. BE"/></div>
+                                <div class="row"><label for="document_number_receipt_prefix" class="col-6 o_light_label"/>
+                                    <field name="document_number_receipt_prefix" class="col-4" placeholder="e.g. WE"/></div>
+                            </div>
+                        </setting>
+                    </block>
+                    <block title="Counter" name="document_number_counter">
+                        <setting string="Format" company_dependent="1"
+                                 help="Number = prefix + year + counter, e.g. AN26000001. The counter restarts every year and always continues after the highest existing number of that year (also numbers imported from other systems).">
+                            <div class="content-group mt16">
+                                <div class="row"><label for="document_number_year_digits" class="col-6 o_light_label"/>
+                                    <field name="document_number_year_digits" class="col-6"/></div>
+                                <div class="row"><label for="document_number_digits" class="col-6 o_light_label"/>
+                                    <field name="document_number_digits" class="col-4"/></div>
+                            </div>
+                        </setting>
+                        <setting company_dependent="1"
+                                 help="A confirmed quotation receives a new number with the sales order prefix. The quotation number is kept on the order.">
+                            <field name="document_number_renumber_on_confirm" />
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>

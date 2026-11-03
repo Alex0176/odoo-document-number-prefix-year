@@ -1,0 +1,269 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* document_number_prefix_year
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-03 11:44+0000\n"
+"PO-Revision-Date: 2026-11-03 11:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid ""
+"A confirmed quotation receives a new number with the sales order prefix. The"
+" quotation number is kept on the order."
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model,name:document_number_prefix_year.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model,name:document_number_prefix_year.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "Counter"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__document_number_digits
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__document_number_digits
+msgid "Counter Digits"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__document_number_refund_prefix
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__document_number_refund_prefix
+msgid "Credit Note Prefix"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "Customer invoices and credit notes are numbered when they are posted."
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__document_number_delivery_prefix
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__document_number_delivery_prefix
+msgid "Delivery Order Prefix"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_account_move__display_name
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__display_name
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_sale_order__display_name
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_stock_picking__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "Document Numbering"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "Format"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields.selection,name:document_number_prefix_year.selection__res_company__document_number_year_digits__4
+msgid "Four digits (2026)"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_account_move__id
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_purchase_order__id
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__id
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__id
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_sale_order__id
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__document_number_invoice_prefix
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__document_number_invoice_prefix
+msgid "Invoice Prefix"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "Invoicing"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model,name:document_number_prefix_year.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid ""
+"Leave a prefix empty to keep the standard Odoo numbering for that document "
+"type."
+msgstr ""
+
+#. module: document_number_prefix_year
+#. odoo-python
+#: code:addons/document_number_prefix_year/models/numbering.py:0
+msgid "New"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__document_number_renumber_on_confirm
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__document_number_renumber_on_confirm
+msgid "New Number on Confirmation"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid ""
+"Number = prefix + year + counter, e.g. AN26000001. The counter restarts "
+"every year and always continues after the highest existing number of that "
+"year (also numbers imported from other systems)."
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,help:document_number_prefix_year.field_sale_order__quotation_number
+msgid "Number of the quotation this order was confirmed from."
+msgstr ""
+
+#. module: document_number_prefix_year
+#. odoo-python
+#: code:addons/document_number_prefix_year/models/res_company.py:0
+msgid "Prefix “%(prefix)s” must not contain spaces or end with a digit."
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "Prefixes"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "Purchase"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model,name:document_number_prefix_year.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__document_number_purchase_prefix
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__document_number_purchase_prefix
+msgid "Purchase Order Prefix"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_sale_order__quotation_number
+msgid "Quotation Number"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__document_number_quotation_prefix
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__document_number_quotation_prefix
+msgid "Quotation Prefix"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__document_number_receipt_prefix
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__document_number_receipt_prefix
+msgid "Receipt Prefix"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "Sales"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model,name:document_number_prefix_year.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__document_number_order_prefix
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__document_number_order_prefix
+msgid "Sales Order Prefix"
+msgstr ""
+
+#. module: document_number_prefix_year
+#. odoo-python
+#: code:addons/document_number_prefix_year/models/res_company.py:0
+msgid "The counter must have between 1 and 12 digits."
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model,name:document_number_prefix_year.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields.selection,name:document_number_prefix_year.selection__res_company__document_number_year_digits__2
+msgid "Two digits (26)"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,help:document_number_prefix_year.field_res_company__document_number_renumber_on_confirm
+#: model:ir.model.fields,help:document_number_prefix_year.field_res_config_settings__document_number_renumber_on_confirm
+msgid ""
+"When a quotation is confirmed it gets a number with the sales order prefix; "
+"the quotation number is kept on the order."
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_company__document_number_year_digits
+#: model:ir.model.fields,field_description:document_number_prefix_year.field_res_config_settings__document_number_year_digits
+msgid "Year Format"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "e.g. AN"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "e.g. AU"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "e.g. BE"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "e.g. GU"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "e.g. LI"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "e.g. RE"
+msgstr ""
+
+#. module: document_number_prefix_year
+#: model_terms:ir.ui.view,arch_db:document_number_prefix_year.res_config_settings_view_form
+msgid "e.g. WE"
+msgstr ""
