@@ -1,6 +1,6 @@
 # Copyright 2026 Biricon IT Services GmbH
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
-"""Shared numbering logic: <prefix><year><counter>.
+"""Shared numbering logic: <prefix><year><counter> (vendor bills: <prefix><year><month><counter>).
 
 * The counter restarts at 1 every year (per prefix and company).
 * It always continues after the highest existing number with the same prefix and year, whatever its
@@ -21,11 +21,16 @@ def is_new_name(env, name):
     return not name or name in NEW_NAMES or name == env._("New")
 
 
-def next_number(env, company, prefix, table, column, date=None):
-    """Return the next number for ``prefix`` in ``table.column`` for ``company``."""
+def next_number(env, company, prefix, table, column, date=None, with_month=False, digits=None):
+    """Return the next number for ``prefix`` in ``table.column`` for ``company``.
+
+    ``with_month``: number = prefix + year + month + counter (the counter restarts every month).
+    ``digits``: counter length, default the company setting.
+    """
     date = date or fields.Date.context_today(env.user)
     year = date.strftime("%Y" if company.document_number_year_digits == "4" else "%y")
-    stem = "%s%s" % (prefix, year)
+    month = date.strftime("%m") if with_month else ""
+    stem = "%s%s%s" % (prefix, year, month)
     pattern = re.sub(r"([^A-Za-z0-9])", r"\\\1", stem)
     key = "document_number_prefix_year:%s:%s" % (company.id, stem)
     env.cr.execute("SELECT pg_advisory_xact_lock(%s)", (zlib.crc32(key.encode()) & 0x7FFFFFFF,))
@@ -41,4 +46,4 @@ def next_number(env, company, prefix, table, column, date=None):
     with env.registry.cursor() as cr2:
         cr2.execute(query, params)
         last = max(last, cr2.fetchone()[0] or 0)
-    return "%s%0*d" % (stem, max(company.document_number_digits or 1, 1), last + 1)
+    return "%s%0*d" % (stem, max(digits or company.document_number_digits or 1, 1), last + 1)

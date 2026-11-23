@@ -4,7 +4,7 @@
     "name": "Document Numbering by Prefix and Year",
     "summary": "Number quotations, orders, invoices, credit notes, deliveries, receipts and purchase orders as "
     "<prefix><year><counter> (e.g. AN26000001), restarting every year and continuing after imported numbers",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.1.0",
     "category": "Accounting",
     "author": "Biricon IT Services GmbH",
     "website": "https://github.com/Alex0176/odoo-document-number-prefix-year",

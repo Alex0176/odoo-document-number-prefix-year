@@ -13,6 +13,9 @@ class ResConfigSettings(models.TransientModel):
     document_number_delivery_prefix = fields.Char(related="company_id.document_number_delivery_prefix", readonly=False)
     document_number_receipt_prefix = fields.Char(related="company_id.document_number_receipt_prefix", readonly=False)
     document_number_purchase_prefix = fields.Char(related="company_id.document_number_purchase_prefix", readonly=False)
+    document_number_bill_prefix = fields.Char(related="company_id.document_number_bill_prefix", readonly=False)
+    document_number_bill_period = fields.Selection(related="company_id.document_number_bill_period", readonly=False)
+    document_number_bill_digits = fields.Integer(related="company_id.document_number_bill_digits", readonly=False)
     document_number_digits = fields.Integer(related="company_id.document_number_digits", readonly=False)
     document_number_year_digits = fields.Selection(related="company_id.document_number_year_digits", readonly=False)
     document_number_renumber_on_confirm = fields.Boolean(

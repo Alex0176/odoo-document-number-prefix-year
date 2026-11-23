@@ -111,3 +111,41 @@ class TestDocumentNumber(TransactionCase):
         self._order(name="AN%s%s" % (self.yy, "9" * 25))
         so = self._order()
         self.assertRegex(so.name, r"^AN%s\d{6}$" % self.yy)
+
+    def _bill(self, bill_date, price=10):
+        return self.env["account.move"].create({
+            "move_type": "in_invoice", "partner_id": self.partner.id, "invoice_date": bill_date,
+            "invoice_line_ids": [(0, 0, {"product_id": self.goods.id, "quantity": 1, "price_unit": price})],
+        })
+
+    def test_vendor_bill_numbers_by_month(self):
+        self.company.document_number_bill_prefix = "WE"
+        self.company.document_number_bill_digits = 4
+        # an old number from another system (counter in the year/month slot) must not disturb the new scheme
+        old = self._bill(date(2018, 4, 3))
+        old.name = "WE18040019"
+        first = self._bill(date(2026, 11, 5))
+        first.action_post()
+        self.assertEqual(first.name, "WE26110001")
+        second = self._bill(date(2026, 11, 20))
+        second.action_post()
+        self.assertEqual(second.name, "WE26110002")
+        december = self._bill(date(2026, 12, 1))
+        december.action_post()
+        self.assertEqual(december.name, "WE26120001", "the counter restarts every month")
+        credit = first._reverse_moves([{"invoice_date": date(2026, 11, 25)}])
+        credit.action_post()
+        self.assertRegex(credit.name, r"^WE2611\d{4}$")
+
+    def test_vendor_bill_year_only(self):
+        self.company.write({"document_number_bill_prefix": "WE", "document_number_bill_period": "year",
+                            "document_number_bill_digits": 5})
+        bill = self._bill(date(2026, 3, 2))
+        bill.action_post()
+        self.assertEqual(bill.name, "WE2600001")
+
+    def test_vendor_bill_without_prefix_keeps_standard(self):
+        self.company.document_number_bill_prefix = False
+        bill = self._bill(date(2026, 3, 2))
+        bill.action_post()
+        self.assertNotRegex(bill.name, r"^WE")

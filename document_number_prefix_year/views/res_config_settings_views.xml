@@ -39,6 +39,17 @@
                                     <field name="document_number_receipt_prefix" class="col-4" placeholder="e.g. WE"/></div>
                             </div>
                         </setting>
+                        <setting string="Vendor Bills" company_dependent="1"
+                                 help="Number = prefix + year + month + counter, e.g. WE26110001. The counter restarts every month and continues after the highest existing number of that month. The date of the bill decides the month. Leave empty to keep the standard Odoo numbering.">
+                            <div class="content-group mt16">
+                                <div class="row"><label for="document_number_bill_prefix" class="col-6 o_light_label"/>
+                                    <field name="document_number_bill_prefix" class="col-4" placeholder="e.g. WE"/></div>
+                                <div class="row"><label for="document_number_bill_period" class="col-6 o_light_label"/>
+                                    <field name="document_number_bill_period" class="col-6"/></div>
+                                <div class="row"><label for="document_number_bill_digits" class="col-6 o_light_label"/>
+                                    <field name="document_number_bill_digits" class="col-4"/></div>
+                            </div>
+                        </setting>
                     </block>
                     <block title="Counter" name="document_number_counter">
                         <setting string="Format" company_dependent="1"
